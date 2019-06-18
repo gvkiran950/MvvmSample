@@ -19,7 +19,6 @@ namespace Mvvm.ViewModel
                 OnPropertyChanged(nameof(Message));
             }
         }
-
         public string Message
         {
             get
