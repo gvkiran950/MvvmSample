@@ -1,5 +1,4 @@
-﻿using Mvvm.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Mvvm.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class AboutPage : ContentPage
     {
-        public HomePage()
-        {          
+        public AboutPage()
+        {
             InitializeComponent();
-           // BindingContext = new HomeViewModel();
         }
     }
 }

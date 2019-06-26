@@ -4,11 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Mvvm.View.HomePage">
-    <ContentPage.Content>
+             xmlns:vm="clr-namespace:Mvvm.ViewModel"             
+             x:Class="Mvvm.View.HomePage" Title="{Binding Path=Title}" Padding="20">
+
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>       
         <StackLayout Padding="10">
             <Entry Text="{Binding Description}" />
-            <Label Text="{Binding Message}"/>            
+            <Label Text="{Binding Message}"/>
+            <Button Text="Test" Command="{Binding TestCommand}"></Button>
+            <Button Text="Test2" Command="{Binding Test2Command}"></Button>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
